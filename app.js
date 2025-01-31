@@ -1,3 +1,8 @@
+/*
+  © 2024 Sarthak Singh Kshatriya. MIT ADT University. 
+  All Rights Reserved.
+*/
+
 // Setting up the Chart.js graph
 const ctx = document.getElementById('eegChart').getContext('2d');
 const feedbackElement = document.getElementById('feedback');
@@ -65,6 +70,13 @@ function startSimulation() {
         feedbackElement.innerHTML = "Simulation Stopped.";
     }
 }
+
+/*
+  © 2024 Sarthak Singh Kshatriya. MIT ADT University. 
+  All Rights Reserved.
+*/
+
+
 // Simulate EEG data and update the chart
 // Update this in your app.js
 function simulateEEG() {

@@ -1,3 +1,5 @@
+# © 2024 Sarthak Singh Kshatriya, MIT ADT University. All Rights Reserved.
+
 import pandas as pd
 import tensorflow as tf
 import numpy as np
@@ -27,6 +29,8 @@ def extract_features(df, window_size=256):
 
     feature_df = pd.DataFrame(features, columns=['Mean_Amplitude', 'Std_Amplitude', 'Dominant_Freq'])
     return feature_df, labels
+
+# © 2024 Sarthak Singh Kshatriya, MIT ADT University. All Rights Reserved.
 
 # Train a TensorFlow model for multi-class classification
 def train_tensorflow_model(df):
@@ -59,6 +63,8 @@ def train_tensorflow_model(df):
     # Save the model
     model.save('eeg_multiclass_model.h5')
     print("Model saved as eeg_multiclass_model.h5")
+
+# © 2024 Sarthak Singh Kshatriya, MIT ADT University. All Rights Reserved.
 
 # Load EEG data and train the model
 eeg_data = load_eeg_data("EEG.csv")

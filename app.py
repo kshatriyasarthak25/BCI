@@ -1,3 +1,5 @@
+# © 2024 Sarthak Singh Kshatriya, MIT ADT University. All Rights Reserved.
+
 from flask import Flask, jsonify
 from flask_cors import CORS
 import pandas as pd
@@ -21,6 +23,8 @@ def extract_realtime_features(window):
     freqs, power = welch(window['Amplitude'], fs=128)
     dominant_freq = freqs[np.argmax(power)]
     return np.array([[mean_amplitude, std_amplitude, dominant_freq]])
+
+# © 2024 Sarthak Singh Kshatriya, MIT ADT University. All Rights Reserved.
 
 # Simulate real-time EEG data and classify
 @app.route('/simulate_eeg', methods=['GET'])
@@ -48,6 +52,8 @@ def simulate_eeg():
     except Exception as e:
         print(f"Error in simulate_eeg: {str(e)}")
         return jsonify({"error": "Internal server error"}), 500
+    
+# © 2024 Sarthak Singh Kshatriya, MIT ADT University. All Rights Reserved.
 
 if __name__ == "__main__":
     app.run(debug=True)
